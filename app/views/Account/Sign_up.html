@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>rVidi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Le styles -->
+  <link href="/public/css/customized_css.css" rel="stylesheet">
+  <link href="/public/css/carousel.css" rel="stylesheet">
+  <link href="/public/css/bootstrap.css" rel="stylesheet">
+  <link href="/public/css/bootstrap-responsive.css" rel="stylesheet">
+
+  
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="public/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="public/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="public/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="public/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="public/img/favicon.png">
+
+        <script src="public/js/jquery.js"></script>
+        <script src="public/js/bootstrap.js"></script>
+</head>
+       
+
+<body>
+  <div class="container body_bg" style="background-color:#e3e4e6;"> 
+    <div class="highlight"> 
+      <!-- Header start here -->
+      <div class="graphic_bg">
+        <div class="row-fluid">
+          <div class="span6">
+            <div class="sprite-logo" style="float: left;"> </div>
+          </div>
+          <div class="span6">
+            <div class="row-fluid"> 
+             
+            </div>
+
+            <!-- search Button desktop view -->
+          
+          </div>
+        </div>
+
+
+        <!-- login container start here -->
+
+        <div class="login_container">
+          <div class="row-fluid">
+            <div class="span2 text_align_center">
+              <i class="sprite-or-icon" style="margin-top: 125px;"></i>
+            </div>
+            <div class="span4 text_align_center"> 
+              <div class="login_title"> 
+                Create a New Account
+              </div>
+              <form action="/sign_up" id='myform' method="post">
+                <input type="text" class="span12" required="true" name="firstname" placeholder="Firstname">
+                <input type="text" class="span12" required="true" name="lastname" placeholder="Lastname">
+                <input type="text" class="span12" required="true" name="username" placeholder="Username">
+                <input type="text" class="span12" required="true" name="email" placeholder="Email">
+                <input type="password" class="span12" required="true" name="password" placeholder="Choose a Password" id="password">
+                <input type="password" class="span12" required="true" name="password_confirmation" placeholder="Re-type Password" id="password_confirmation">
+                <span id="password_confirm"></span>
+                <input type="text" class="span12" required="true" name="city" placeholder="City">
+                <input type="text" class="span12" required="true" name="state" placeholder="State">
+                <input type="text" class="span12" required="true" name="country" placeholder="Country">
+            </div>
+          </div>
+        </div>
+        <!-- login container end here -->
+        <div class=" hr_bg"> 
+          <div class="text_align_center login_and_account"> 
+            <a href="/" class="btn ">Cancel</a>
+            <i class="sprite-or-icon_black" style=""></i>
+            <input type="submit" value="Create Account" class="btn  btn-warning" onclick="return validateSignupForm(this);">
+          </div>
+        </div>
+              </form>
+      </div>  <!-- Header end here -->
+
+
+    </div>
+    <!-- FOOTER -->
+    <div id="footer-bottom">
+      <div class="container clearfix">
+        <div class="row-fluid">
+          <div class="span8" style="padding-top: 76px;">
+            <a href="">&copy;2012 rVidi </a> &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a href="#">About |</a>
+            <a href="#">Contact |</a>
+            <a href="#">Help |</a>
+            <a href="#">Privacy policy |</a>
+            <a href="#">Terms and Condition  </a>
+          </div>
+          <div class="span4 pull-right text_align_right footer_image " id="footer-bottom2"> 
+            <div  style="margin-top: 154px;">   <a href="#" class="advt">Advertise with us |</a>
+              <a href="#" class="advt">Careers |</a>
+              <a href="#" class="advt">Feedback </a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end .container -->
+    </div>
+
+  </div>
+</body>
+<script type="text/javascript">
+  function validateSignupForm() {
+    var password = document.getElementById("password").value
+    var password_confirmation = document.getElementById("password_confirmation").value
+    if(password != password_confirmation) {
+      document.getElementById("password_confirm").innerHTML = "Passwords do not Match"
+      return false;
+    }
+}
+
+</script>
+</html>
+
