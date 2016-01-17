@@ -7,7 +7,8 @@ module:testrunner
 GET     /                                       App.Index
 
 GET			/sign_up																Account.Sign_up
-GET			/sign_up1																Account1.Sign_up
+GET			/log_in																	Session.New
+POST		/session/create													Session.:Create
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

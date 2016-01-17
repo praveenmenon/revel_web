@@ -1,6 +1,22 @@
 package app
 
-import "github.com/revel/revel"
+import (
+	"database/sql"
+	_ "github.com/lib/pq"
+	"github.com/revel/revel"
+	"log"
+)
+
+var DB *sql.DB
+var err error
+
+func InitDB() {
+	DB, err = sql.Open("postgres", "password=password host=localhost dbname=revel_web sslmode=disable")
+	if err != nil {
+		log.Fatal("could not connect to database:", err)
+	}
+	revel.INFO.Println("DB Connected:", DB)
+}
 
 func init() {
 	// Filters is the default set of global filters.
